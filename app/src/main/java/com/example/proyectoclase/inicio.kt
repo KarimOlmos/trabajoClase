@@ -26,8 +26,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,7 +49,7 @@ fun inicio(){
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Gray)
+                .background(Color.Blue)
         ) {
             Header()
             Body()
@@ -62,7 +64,7 @@ fun Header() {
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight(0.10f)
-            .background(Color.Gray),
+            .background(Color.Blue),
         contentAlignment = Alignment.TopEnd
 
     ) {
@@ -74,7 +76,7 @@ fun Header() {
 
             Icon(
                 imageVector = Icons.Default.Info,
-                contentDescription = "Info",tint = Color.Blue,
+                contentDescription = "Info",tint = Color(0xFFE2E736),
                 modifier = Modifier
                     .clickable {
 
@@ -89,7 +91,7 @@ fun Header() {
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight(0.18f)
-            .background(Color.Gray),
+            .background(Color.Blue),
         contentAlignment = Alignment.BottomCenter
 
     ) {
@@ -107,7 +109,7 @@ fun Header() {
                 text = "CALCULADORA",
                 modifier = Modifier
                     .padding(16.dp),
-                style = MaterialTheme.typography.bodyMedium.copy(color = Color.Red),
+                style = MaterialTheme.typography.bodyMedium.copy(color = Color(0xFFE2E736)),
                 fontSize = 40.sp
 
             )
@@ -147,7 +149,7 @@ fun Footer() {
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight(1f)
-            .background(Color.Gray),
+            .background(Color.Blue),
         contentAlignment = Alignment.BottomCenter
     ) {
 
@@ -174,7 +176,14 @@ fun Footer() {
                     )
             ){
 
-                Text(text = "Entrar")
+                Text(
+                    text = "ENTRAR",
+                    modifier = Modifier,
+                    style = MaterialTheme.typography.bodyMedium.copy(color = Color.Black),
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+
+                )
             }
 
 
